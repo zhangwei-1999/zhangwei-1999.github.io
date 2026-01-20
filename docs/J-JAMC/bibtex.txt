@@ -1,0 +1,10 @@
+@article{mwjzl26-jamc,
+  title={A family of derivative-free projection methods with the modified two-step inertial strategy for constrained nonlinear pseudo-monotone equations},
+  author={Ma, Guodong and Wang, Junji and Jian, Jinbao and Zhang, Wei and Luo, Xiang},
+  journal={Journal of Applied Mathematics and Computing},
+  volume={72},
+  number={2},
+  pages={80},
+  year={2026},
+  publisher={Springer}
+}

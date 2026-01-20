@@ -1,0 +1,9 @@
+@article{mzjhm25-anm,
+  title={An inertial hybrid DFPM-based algorithm for constrained nonlinear equations with applications},
+  author={Ma, Guodong and Zhang, Wei and Jian, Jinbao and Huang, Zefeng and Mo, Jingyi},
+  journal={Applied Numerical Mathematics},
+  volume={209},
+  pages={100--123},
+  year={2025},
+  publisher={Elsevier}
+}

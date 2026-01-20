@@ -1,0 +1,9 @@
+@article{kang26-arxiv,
+      title={TEA: Temporal Adaptive Satellite Image Semantic Segmentation}, 
+      author={Juyuan Kang and Hao Zhu and Yan Zhu and Wei Zhang and Jianing Chen and Tianxiang Xiao and Yike Ma and Hao Jiang and Feng Dai},
+      year={2026},
+      eprint={2601.04956},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2601.04956}, 
+}

@@ -1,0 +1,18 @@
+@InProceedings{lzlz18-ica3pp,
+author="Li, Fangping
+and Zhang, Wei
+and Liu, Heng
+and Zhang, Maosheng",
+editor="Hu, Ting
+and Wang, Feng
+and Li, Hongwei
+and Wang, Qian",
+title="Feature Extraction of Dichotomous Equipment Based on Non-intrusive Load Monitoring and Decomposition",
+booktitle="Algorithms and Architectures for Parallel Processing",
+year="2018",
+publisher="Springer International Publishing",
+address="Cham",
+pages="192--200",
+abstract="Non-invasive load monitoring and decomposition technology plays a very important role in the process of intelligent power grid construction nowadays. This paper explores the feature extraction of transient and steady state by using the data of known binary single electrical equipment state. Regarding to the steady state characteristic parameter extraction, the method of Fourier series decomposition is used to calculate the average active power and reactive power, and then make a parameter table of steady state power and later analyze waveform characteristics. Regarding to transient characteristic parameters extraction, Mallat algorithm is used to make an extraction of the disturbance waveform, with its high frequency coefficient as the difference between the transient and steady-state characteristic value, so as to estimate the duration of the disturbance directly. By extracting the two-state characteristics, this paper explores the load marks that can be used to distinguish different devices. More over, this article combines with many measured data to verify the results, which has made a satisfy.",
+isbn="978-3-030-05234-8"
+}
