@@ -1,0 +1,9 @@
+@article{jhyz24-jcam,
+  title={Splitting augmented Lagrangian-type algorithms with partial quadratic approximation to solve sparse signal recovery problems},
+  author={Jian, Jinbao and Huang, Qiongxuan and Yin, Jianghua and Zhang, Wei},
+  journal={Journal of Computational and Applied Mathematics},
+  volume={449},
+  pages={115972},
+  year={2024},
+  publisher={Elsevier}
+}
