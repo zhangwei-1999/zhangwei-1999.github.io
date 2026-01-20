@@ -70,7 +70,7 @@ I'm interested in Computer Vision, Optimization,  with a focus on **3D reconstru
 - 02/2026: 🎉 One cooperative paper is accepted by ***<span style="color:#740099;">Journal of Applied Mathematics and Computing</span>***. 
 - 01/2026: 📝 One cooperative paper is released on arXiv. [TEA: Temporal Adaptive Satellite Image Semantic Segmentation.](https://arxiv.org/abs/2601.04956)
 - 09/2025: 🎓 I’m becoming a Ph.D. student at [Institute of Computing Technology, Chinese Academy of Sciences](http://www.ict.ac.cn). 
-- 05/2025: 💼 Conference presentation, ***<span style="color:#038355;">CSSC 2025</span>***, Guiyang, Guizhou.
+- 05/2025: 💼 Conference presentation, ***<span style="color:#038355;">CSSC 2025</span>***, Kunming, Yunnan.
 - 03/2025: 🎉 One paper is accepted by ***<span style="color:#740099;">Applied Numerical Mathematics</span>***. 
 - 01/2025: 🎉 One paper is accepted by ***<span style="color:#740099;">Electronics Letters</span>***. 
 - 11/2024: 🏆 The 21st China Post-Graduate Mathematical Contest in Modeling. **<span style="color:#ae1324;">Second Prize</span>**.
