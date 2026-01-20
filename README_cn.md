@@ -1,10 +1,14 @@
 # 🌟 个人学术主页模板 | 自适应 & 极简部署
 
-在寻找中文版本？ [README (English)](README_en.md)
+在寻找英文版本？ [README (English)](README_en.md)
 
-这是一个兼顾 **PC/移动端自适应**、**极简二次开发** 和 **内容快速更新** 的个人学术主页模板，基于纯 HTML+CSS 构建，无需复杂依赖。既可直接作为个人主页使用（当前是[Antxinyuan的学术主页](https://antxinyuan.github.io/)），也能通过几分钟的简单修改，部署属于你自己的专业学术主页～
+本项目的原始项目代码来源于[Antxinyuan的学术主页](https://antxinyuan.github.io/)，如果使用此模板，请 ⭐️ Star 一下：https://github.com/AntXinyuan/antxinyuan.github.io/.
+
+这是一个兼顾 **PC/移动端自适应**、**极简二次开发** 和 **内容快速更新** 的个人学术主页模板，基于纯 HTML+CSS 构建，无需复杂依赖。既可直接作为个人主页使用（当前是 [zhangwei-1999的学术主页](https://zhangwei-1999.github.io/)），也能通过几分钟的简单修改，部署属于你自己的专业学术主页～
 
 如果这个模板帮到了你，欢迎点亮 ⭐️ Star 支持；若我的研究工作对你有启发，也欢迎引用相关成果！
+
+以下是来自 https://github.com/AntXinyuan/antxinyuan.github.io/ 的项目说明：
 
 
 ## ✨ 核心特性

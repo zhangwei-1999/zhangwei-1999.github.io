@@ -2,12 +2,16 @@
 
 Looking for the Chinese version? [README (中文)](README_cn.md)
 
-This is a personal academic homepage template that balances **PC/mobile responsiveness**, **minimal secondary development**, and **fast content updates**. Built with pure HTML+CSS (no complex dependencies), it can be used directly as a personal homepage (currently [Antxinyuan's academic homepage](https://antxinyuan.github.io/)) or customized in minutes to deploy your own professional academic site!
+The original code for this project originates from [Antxinyuan's academic homepage](https://antxinyuan.github.io/). If you use this template, please drop a ⭐️ Star: https://github.com/AntXinyuan/antxinyuan.github.io/.
+
+This is a personal academic homepage template that balances **PC/mobile responsiveness**, **minimal secondary development**, and **fast content updates**. Built with pure HTML+CSS (no complex dependencies), it can be used directly as a personal homepage (currently [[zhangwei-1999's academic homepage](https://antxinyuan.github.io/)) or customized in minutes to deploy your own professional academic site!
 
 If this template helps you, please star ⭐️ the repository to show support. If my research work inspires you, feel free to cite the related achievements!
 
+**Below is the project description from https://github.com/AntXinyuan/antxinyuan.github.io/:**
 
 ## ✨ Core Features
+
 - 📱 **Full-device Responsiveness**: Automatically adapts to desktops, tablets, and mobile phones with an elegant layout and smooth reading experience
 - 🛠️ **Minimal Development**: Relies only on basic HTML+CSS with a clear code structure, making secondary development extremely accessible
 - 📝 **Separation of Content & Style**: All personal information (publications, education, etc.) is centralized in a single Markdown file—no style modifications needed for updates
