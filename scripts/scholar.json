@@ -16,7 +16,7 @@
   ],
   "email_domain": "@ict.ac.cn",
   "homepage": "https://antxinyuan.github.io/",
-  "citedby": 90,
+  "citedby": 97,
   "publications": {
     "eXwizz8AAAAJ:d1gkVwhDpl0C": {
       "container_type": "Publication",
@@ -28,7 +28,7 @@
       },
       "filled": false,
       "author_pub_id": "eXwizz8AAAAJ:d1gkVwhDpl0C",
-      "num_citations": 42,
+      "num_citations": 47,
       "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=879864320092800065",
       "cites_id": [
         "879864320092800065"
@@ -60,7 +60,7 @@
       },
       "filled": false,
       "author_pub_id": "eXwizz8AAAAJ:9yKSN-GCB0IC",
-      "num_citations": 12,
+      "num_citations": 13,
       "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13973028967109303026",
       "cites_id": [
         "13973028967109303026"
@@ -76,7 +76,7 @@
       },
       "filled": false,
       "author_pub_id": "eXwizz8AAAAJ:qjMakFHDy7sC",
-      "num_citations": 5,
+      "num_citations": 6,
       "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12832594709099459459",
       "cites_id": [
         "12832594709099459459"
@@ -86,7 +86,7 @@
       "container_type": "Publication",
       "source": "AUTHOR_PUBLICATION_ENTRY",
       "bib": {
-        "title": "TopoPoint: Enhance Topology Reasoning via Endpoint Detection in Autonomous Driving",
+        "title": "Topopoint: Enhance topology reasoning via endpoint detection in autonomous driving",
         "pub_year": "2025",
         "citation": "arXiv preprint arXiv:2505.17771, 2025"
       },
@@ -127,5 +127,5 @@
       "num_citations": 0
     }
   },
-  "updated": "2026-01-18 08:14:39.234268"
+  "updated": "2026-02-22 08:37:07.746659"
 }
