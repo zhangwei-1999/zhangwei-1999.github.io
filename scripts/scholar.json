@@ -16,7 +16,7 @@
   ],
   "email_domain": "@ict.ac.cn",
   "homepage": "https://antxinyuan.github.io/",
-  "citedby": 97,
+  "citedby": 102,
   "publications": {
     "eXwizz8AAAAJ:d1gkVwhDpl0C": {
       "container_type": "Publication",
@@ -28,7 +28,7 @@
       },
       "filled": false,
       "author_pub_id": "eXwizz8AAAAJ:d1gkVwhDpl0C",
-      "num_citations": 47,
+      "num_citations": 48,
       "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=879864320092800065",
       "cites_id": [
         "879864320092800065"
@@ -44,7 +44,7 @@
       },
       "filled": false,
       "author_pub_id": "eXwizz8AAAAJ:WF5omc3nYNoC",
-      "num_citations": 24,
+      "num_citations": 26,
       "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17940048768269899219",
       "cites_id": [
         "17940048768269899219"
@@ -60,7 +60,7 @@
       },
       "filled": false,
       "author_pub_id": "eXwizz8AAAAJ:9yKSN-GCB0IC",
-      "num_citations": 13,
+      "num_citations": 14,
       "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13973028967109303026",
       "cites_id": [
         "13973028967109303026"
@@ -76,7 +76,7 @@
       },
       "filled": false,
       "author_pub_id": "eXwizz8AAAAJ:qjMakFHDy7sC",
-      "num_citations": 6,
+      "num_citations": 7,
       "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12832594709099459459",
       "cites_id": [
         "12832594709099459459"
@@ -114,6 +114,18 @@
         "7132374231750233237"
       ]
     },
+    "eXwizz8AAAAJ:LkGwnXOMwfcC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Enhance Panoramic Object Detection Using Planar Image Datasets",
+        "pub_year": "2026",
+        "citation": "IEEE Transactions on Multimedia, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "eXwizz8AAAAJ:LkGwnXOMwfcC",
+      "num_citations": 0
+    },
     "eXwizz8AAAAJ:_FxGoFyzp5QC": {
       "container_type": "Publication",
       "source": "AUTHOR_PUBLICATION_ENTRY",
@@ -127,5 +139,5 @@
       "num_citations": 0
     }
   },
-  "updated": "2026-02-22 08:37:07.746659"
+  "updated": "2026-03-01 08:36:06.043640"
 }
