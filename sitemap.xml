@@ -7,6 +7,18 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://antxinyuan.github.io/images/ynu.webp</loc>
+    <lastmod>2026-01-20 19:45:13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://antxinyuan.github.io/images/gxmu.webp</loc>
+    <lastmod>2026-01-20 19:45:13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://antxinyuan.github.io/images/ucas.webp</loc>
     <lastmod>2026-01-20 19:45:13</lastmod>
     <changefreq>yearly</changefreq>
@@ -14,12 +26,6 @@
   </url>
   <url>
     <loc>https://antxinyuan.github.io/images/gxmu.png</loc>
-    <lastmod>2026-01-20 19:45:13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://antxinyuan.github.io/images/ucas.png</loc>
     <lastmod>2026-01-20 19:45:13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -37,7 +43,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://antxinyuan.github.io/images/logo.png</loc>
+    <loc>https://antxinyuan.github.io/images/logo.ico</loc>
+    <lastmod>2026-01-20 19:45:13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://antxinyuan.github.io/images/ucas.png</loc>
     <lastmod>2026-01-20 19:45:13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -49,32 +61,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://antxinyuan.github.io/images/ynu.webp</loc>
+    <loc>https://antxinyuan.github.io/images/logo.png</loc>
     <lastmod>2026-01-20 19:45:13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://antxinyuan.github.io/images/logo.ico</loc>
-    <lastmod>2026-01-20 19:45:13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://antxinyuan.github.io/images/gxmu.webp</loc>
-    <lastmod>2026-01-20 19:45:13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://antxinyuan.github.io/legacy/index.html</loc>
-    <lastmod>2026-01-19 16:14:02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://antxinyuan.github.io/legacy/jemdoc.css</loc>
-    <lastmod>2026-01-19 16:14:02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -97,24 +85,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antxinyuan.github.io/docs/C-ICA3PP/ICA3PP2018.png</loc>
-    <lastmod>2026-01-20 19:45:13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://antxinyuan.github.io/docs/C-ICA3PP/ICA3PP2018.webp</loc>
-    <lastmod>2026-01-20 19:45:13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://antxinyuan.github.io/docs/arxiv2025b/thumbnail.webp</loc>
-    <lastmod>2026-01-19 16:14:02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://antxinyuan.github.io/docs/A-arxiv26/arxiv26.webp</loc>
     <lastmod>2026-01-20 19:45:13</lastmod>
     <changefreq>monthly</changefreq>
@@ -127,14 +97,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antxinyuan.github.io/docs/J-ANM/ANM2025.png</loc>
-    <lastmod>2026-01-20 19:45:13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://antxinyuan.github.io/docs/J-ANM/ANM2025.webp</loc>
-    <lastmod>2026-01-20 19:45:13</lastmod>
+    <loc>https://antxinyuan.github.io/docs/electronics2023/thumbnail.webp</loc>
+    <lastmod>2026-01-19 16:14:02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -145,8 +109,14 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antxinyuan.github.io/docs/electronics2023/thumbnail.webp</loc>
-    <lastmod>2026-01-19 16:14:02</lastmod>
+    <loc>https://antxinyuan.github.io/docs/J-JCAM/JCAM2024.png</loc>
+    <lastmod>2026-01-20 19:45:13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antxinyuan.github.io/docs/J-JCAM/JCAM2024.webp</loc>
+    <lastmod>2026-01-20 19:45:13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -163,8 +133,26 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antxinyuan.github.io/docs/cvpr2024/thumbnail.png</loc>
-    <lastmod>2026-01-19 16:14:02</lastmod>
+    <loc>https://antxinyuan.github.io/docs/C-ICA3PP/ICA3PP2018.png</loc>
+    <lastmod>2026-01-20 19:45:13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antxinyuan.github.io/docs/C-ICA3PP/ICA3PP2018.webp</loc>
+    <lastmod>2026-01-20 19:45:13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antxinyuan.github.io/docs/J-ANM/ANM2025.png</loc>
+    <lastmod>2026-01-20 19:45:13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antxinyuan.github.io/docs/J-ANM/ANM2025.webp</loc>
+    <lastmod>2026-01-20 19:45:13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -187,15 +175,27 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antxinyuan.github.io/docs/J-JCAM/JCAM2024.webp</loc>
-    <lastmod>2026-01-20 19:45:13</lastmod>
+    <loc>https://antxinyuan.github.io/docs/cvpr2024/thumbnail.png</loc>
+    <lastmod>2026-01-19 16:14:02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antxinyuan.github.io/docs/J-JCAM/JCAM2024.png</loc>
-    <lastmod>2026-01-20 19:45:13</lastmod>
+    <loc>https://antxinyuan.github.io/docs/arxiv2025b/thumbnail.webp</loc>
+    <lastmod>2026-01-19 16:14:02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antxinyuan.github.io/legacy/jemdoc.css</loc>
+    <lastmod>2026-01-19 16:14:02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://antxinyuan.github.io/legacy/index.html</loc>
+    <lastmod>2026-01-19 16:14:02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 </urlset>
