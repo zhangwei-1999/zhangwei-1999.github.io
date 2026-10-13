@@ -1,0 +1,282 @@
+/* Quiet light fields and interacting surface waves; palette lives in themes.css. */
+.water-background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--water-field);
+  contain: strict;
+}
+.water-light {
+  position: absolute;
+  pointer-events: none;
+  filter: blur(34px);
+}
+.water-illumination {
+  position: absolute;
+  inset: -8%;
+  pointer-events: none;
+  transform: translate3d(var(--flow-x, 0px), var(--flow-y, 0px), 0)
+    rotate(var(--flow-angle, 0deg));
+}
+.water-sheen {
+  position: absolute;
+  inset: -15%;
+  pointer-events: none;
+  /* A broad refracted light band, with no outline or pointer-following circle. */
+  background: linear-gradient(
+    118deg,
+    transparent 23%,
+    #ffffff04 34%,
+    #ffffff8a 43%,
+    #ffffff1f 49%,
+    rgba(var(--water-tint), 0.08) 54%,
+    #ffffff47 60%,
+    transparent 74%
+  );
+  filter: blur(24px);
+  opacity: calc(var(--flow-active, 0) * 0.72);
+}
+.water-light-one {
+  width: 90vw;
+  height: 70vh;
+  right: -24vw;
+  top: -18vh;
+  background: var(--water-light-one);
+  animation: mist-drift 24s ease-in-out infinite alternate;
+}
+.water-light-two {
+  width: 78vw;
+  height: 64vh;
+  left: -18vw;
+  bottom: -24vh;
+  background: var(--water-light-two);
+  animation: mist-drift 30s ease-in-out infinite alternate-reverse;
+}
+.water-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23617282' opacity='.2' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+}
+.water-wave-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.water-wave-field {
+  width: 100%;
+  height: 100%;
+  filter: blur(0.7px);
+}
+.water-wave-field[data-state="paused"] { visibility: hidden; }
+.glass {
+  --glass-angle: 135deg;
+  background: linear-gradient(
+    145deg,
+    #ffffff61,
+    #ffffff2e 48%,
+    rgba(var(--surface-tint), 0.12)
+  );
+  border-color: #ffffff9e;
+  backdrop-filter: blur(14px) saturate(1.18);
+  -webkit-backdrop-filter: blur(14px) saturate(1.18);
+  box-shadow:
+    inset 0 1px 0 #fffffff0,
+    inset 1px 0 0 #ffffff70,
+    inset 0 -1px 0 #7b92a326,
+    0 4px 20px #53749209;
+}
+.ripple-surface::before {
+  background: radial-gradient(
+    160px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    #ffffff45,
+    #ffffff0a 45%,
+    transparent 72%
+  );
+  opacity: var(--glass-active, 0);
+  transition: opacity 450ms ease;
+}
+/* Only the blurred backdrop is displaced. Foreground labels remain crisp. */
+.navbar.liquid-navigation.has-refraction {
+  backdrop-filter: blur(10px) saturate(1.2) var(--refraction-filter);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2) var(--refraction-filter);
+}
+.glass-filter-definitions {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+@keyframes mist-drift {
+  from {
+    transform: translate(-15px, 0) scale(0.96);
+  }
+  to {
+    transform: translate(20px, -15px) scale(1.04);
+  }
+}
+.hero h1 {
+  font-size: clamp(50px, 6.2vw, 76px);
+  letter-spacing: -0.055em;
+}
+.portrait-card {
+  width: min(100%, 340px);
+  height: auto;
+  padding: 9px;
+  border-radius: 23px;
+  background: linear-gradient(145deg, #ffffff94, #ffffff38);
+  backdrop-filter: blur(18px);
+  transform: rotate(2deg);
+  box-shadow:
+    0 18px 45px #4d779b12,
+    inset 0 1px 0 white;
+}
+.portrait-card > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  filter: none;
+  border-radius: 15px;
+}
+.portrait-caption {
+  position: relative;
+  inset: auto;
+  margin-top: 7px;
+  background: #ffffff4a;
+  border-color: #ffffff6b;
+  padding: 9px 11px;
+}
+.portrait-spark {
+  font-size: 25px;
+  top: -10px;
+  right: -5px;
+}
+.social-links {
+  gap: 9px 13px;
+  align-items: center;
+}
+.social-links .social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 2px;
+  border-radius: 8px;
+  color: #566f82;
+  font-size: 10px;
+  transition:
+    color 0.35s,
+    transform 0.35s;
+}
+.social-links .social-link:hover {
+  color: #756198;
+  transform: translateY(-1px);
+}
+.social-links .social-icon {
+  width: 15px;
+  height: 15px;
+  flex: none;
+  opacity: 0.86;
+}
+.social-links .social-link > span {
+  font-size: inherit;
+  color: inherit;
+}
+.social-links .social-external {
+  font-size: 9px;
+  opacity: 0.65;
+  margin-left: -3px;
+}
+.publication-card::after {
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--border-angle, 0deg),
+    #b9a4d016 0deg,
+    #c4b1db29 36deg,
+    #b291d88f 66deg,
+    #9475bd 84deg,
+    #f9f2ff 96deg,
+    #af99d7a3 110deg,
+    #bca4d216 152deg,
+    #bca4d210 240deg,
+    #d6c5efb3 271deg,
+    #ad91d2d9 293deg,
+    #bca4d216 325deg
+  );
+  opacity: 0.16;
+}
+.publication-card:hover::after,
+.publication-card:focus-within::after {
+  opacity: 1;
+  animation: border-flow 4.8s linear infinite;
+}
+.publication-card:hover,
+.publication-card:focus-within {
+  box-shadow:
+    inset 0 1px 0 white,
+    0 8px 30px #a38ab915,
+    0 0 0 1px #c5b2e024;
+}
+
+@media (max-width: 1000px) {
+  .hero-portrait-scene {
+    transform: none;
+  }
+  .hero {
+    column-gap: 35px;
+  }
+  .portrait-card {
+    width: min(100%, 310px);
+  }
+}
+@media (max-width: 700px) {
+  .water-light {
+    animation: none;
+    filter: blur(22px);
+  }
+  .hero h1 {
+    font-size: clamp(44px, 11.6vw, 60px);
+  }
+  .portrait-card {
+    width: min(100%, 290px);
+  }
+  .portrait-spark {
+    right: 5%;
+  }
+  .social-links .social-link {
+    font-size: 11px;
+    min-height: 32px;
+  }
+  .social-links {
+    column-gap: 14px;
+    row-gap: 7px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .water-illumination {
+    transform: none;
+  }
+  .water-sheen {
+    display: none;
+  }
+  .water-light {
+    animation: none;
+  }
+  .social-links .social-link:hover {
+    transform: none;
+  }
+  .publication-card:hover::after,
+  .publication-card:focus-within::after {
+    animation: none;
+    opacity: 0.75;
+  }
+}
+@media (prefers-contrast: more), (prefers-reduced-transparency: reduce) {
+  .glass,
+  .navbar.liquid-navigation {
+    background: #f9fbfcf5;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "life": {
+    "photoCount": 139,
+    "manifest": "gallery-encrypted/life/manifest.json",
+    "access": "managed"
+  },
+  "lover": {
+    "photoCount": 0,
+    "manifest": "gallery-encrypted/lover/manifest.json",
+    "access": "managed"
+  }
+}

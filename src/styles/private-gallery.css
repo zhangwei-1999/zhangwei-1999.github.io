@@ -1,0 +1,42 @@
+.gallery-summary { font-size: 12px; color: #7d6a51; letter-spacing: .045em; margin-top: 22px; }
+.album-card--wide { grid-column: 1 / -1; }
+.album-card--wide .album-card__visual { aspect-ratio: 3.7; min-height: 285px; }
+.album-card--wide .album-card__content { max-width: 540px; }
+.album-card--wide .album-art { background: linear-gradient(110deg, #eee1d8, #f6ecdf 48%, #dedfd4); }
+.album-card--wide .album-art__arch { width: 21%; height: 105%; left: 67%; top: 8%; }
+.album-card--wide .album-art__sun { width: 16%; top: -22%; right: 8%; }
+.album-card--wide .album-art__horizon { width: 88%; left: 35%; top: 44%; }
+.album-card__privacy { display: inline-flex; position: absolute; top: 52px; left: 26px; gap: 5px; align-items: center; color: #675b49; font-size: 11px; }
+.gallery-lock-button { display: inline-flex; align-items: center; gap: 7px; margin-left: 18px; padding: 5px 11px; border: 1px solid #b6a58250; border-radius: 30px; color: #75644a; background: #ffffff80; font-size: 12px; }
+.gallery-locked { position: relative; overflow: hidden; text-align: center; padding: 60px 24px; border-radius: var(--radius-card); isolation: isolate; }
+.gallery-locked h2 { font: 400 clamp(23px, 3vw, 32px) var(--font-heading); }
+.gallery-locked > p { color: #7b6d59; margin-bottom: 26px; }
+.gallery-locked__cover { position: absolute; inset: 0; z-index: -1; object-fit: cover; width: 100%; height: 100%; opacity: .12; }
+.gallery-unlock { position: fixed; inset: 0; padding: 0; margin: auto; width: min(440px, calc(100vw - 32px)); max-height: calc(100dvh - 40px); border: 1px solid #ffffffd9; border-radius: 26px; color: #504638; background: linear-gradient(145deg, #fffcf7f5, #f6f0e3eb); backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px); box-shadow: 0 25px 90px #3b32242b, inset 0 1px 0 #fff; animation: gallery-unlock-enter 260ms ease-out; }
+.gallery-unlock::backdrop { background: #3e3b3542; backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px); animation: gallery-unlock-enter 260ms ease-out; }
+.gallery-unlock__panel { position: relative; padding: 38px 34px 24px; text-align: center; }
+.gallery-unlock__close { position: absolute; top: 12px; right: 12px; display: grid; place-items: center; width: 35px; height: 35px; border: 1px solid #a8947020; border-radius: 50%; background: #ffffff80; color: #807058; }
+.gallery-unlock__symbol { display: grid; place-items: center; width: 60px; height: 60px; margin: 0 auto 24px; color: #9b8055; border: 1px solid #ffffffc9; border-radius: 20px; background: linear-gradient(145deg, #fffefbcc, #e9dcc66b); box-shadow: inset 0 1px 0 white, 0 8px 26px #ac927612; }
+.gallery-unlock .eyebrow { color: #867153; font-size: 10px; }
+.gallery-unlock h2 { margin: 14px 0 18px; font: 400 32px var(--font-heading); letter-spacing: -.025em; }
+.gallery-unlock__hint { color: #7d6c54; line-height: 1.8; font-size: 13px; margin: 0 0 28px; }
+.gallery-unlock form { text-align: left; }
+.gallery-unlock label { display: block; font-size: 12px; color: #75644c; margin-bottom: 8px; }
+.gallery-unlock input { display: block; width: 100%; min-width: 0; padding: 12px 14px; border: 1px solid #b7a68870; border-radius: 12px; background: #ffffff9c; color: #504638; font: inherit; font-size: 16px; }
+.gallery-unlock input:focus { outline: 2px solid #ab98ba80; outline-offset: 3px; }
+.gallery-unlock .button { width: 100%; justify-content: center; margin-top: 18px; background: #e8ddcacc; border: 1px solid #d8c9a9; color: #615139; }
+.gallery-unlock .button:disabled { opacity: .6; cursor: wait; }
+.gallery-unlock__error { font-size: 12px; line-height: 1.7; color: #995644; margin: 12px 0 0; }
+.gallery-unlock__status { display: block; min-height: 20px; margin-top: 10px; text-align: center; font-size: 11px; color: #7f7059; }
+.gallery-image-placeholder { display: grid; align-items: center; justify-items: center; width: 100%; min-height: 180px; padding: 20px; background: #e8e1d6; color: #776953; font-size: 12px; font-weight: 400; }
+.gallery-lightbox__image.gallery-image-placeholder { width: min(65vw, 800px); background: #5d5b57; color: #f3eee6; }
+@keyframes gallery-unlock-enter { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 700px) {
+  .album-card--wide .album-card__visual { min-height: 330px; aspect-ratio: 1.2; }
+  .album-card--wide .album-art__arch { width: 42%; left: 49%; }
+  .album-card--wide .album-art__sun { width: 38%; top: 5%; }
+  .gallery-unlock__panel { padding: 36px 23px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-unlock, .gallery-unlock::backdrop { animation: none; }
+}

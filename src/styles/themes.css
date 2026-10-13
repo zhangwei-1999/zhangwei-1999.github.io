@@ -1,0 +1,131 @@
+/* A shared glass material, with a different quiet tint in each room. */
+.site {
+  --water-tint: 132, 169, 195;
+  --surface-tint: 226, 237, 245;
+  --nav-tint: 205, 223, 237;
+  --water-field:
+    radial-gradient(ellipse at 8% 20%, #deedf3 0%, transparent 46%),
+    radial-gradient(ellipse at 91% 25%, #dcebf4 0%, transparent 43%),
+    radial-gradient(ellipse at 69% 84%, #e9e6f3 0%, transparent 49%),
+    linear-gradient(138deg, #f6f9fb 6%, #edf4f7 47%, #f6f7fb 100%);
+  --water-light-one: radial-gradient(
+    ellipse,
+    #fcffffd9 5%,
+    #d6e7f58a 42%,
+    transparent 72%
+  );
+  --water-light-two: radial-gradient(
+    ellipse,
+    #f7fcffc9,
+    #dce3f485 37%,
+    transparent 70%
+  );
+}
+
+.site.publications-theme {
+  --water-tint: 164, 149, 190;
+  --surface-tint: 235, 229, 245;
+  --nav-tint: 224, 213, 240;
+  --water-field:
+    radial-gradient(ellipse at 8% 20%, #ece6f3 0%, transparent 46%),
+    radial-gradient(ellipse at 91% 25%, #e8e3f2 0%, transparent 43%),
+    radial-gradient(ellipse at 69% 84%, #e9eaf5 0%, transparent 49%),
+    linear-gradient(138deg, #faf8fc 6%, #f1edf7 47%, #f8f7fc 100%);
+  --water-light-one: radial-gradient(
+    ellipse,
+    #fffaffd9 5%,
+    #e6dcf28a 42%,
+    transparent 72%
+  );
+  --water-light-two: radial-gradient(
+    ellipse,
+    #fcfaffc9,
+    #e5def085 37%,
+    transparent 70%
+  );
+}
+
+.site.news-theme {
+  --water-tint: 191, 151, 158;
+  --surface-tint: 246, 229, 232;
+  --nav-tint: 240, 216, 222;
+  --water-field:
+    radial-gradient(ellipse at 8% 20%, #f4e6e8 0%, transparent 46%),
+    radial-gradient(ellipse at 91% 25%, #f2e3e8 0%, transparent 43%),
+    radial-gradient(ellipse at 69% 84%, #f2eaf0 0%, transparent 49%),
+    linear-gradient(138deg, #fcf9f9 6%, #f8eff0 47%, #fcf8fa 100%);
+  --water-light-one: radial-gradient(
+    ellipse,
+    #fffafbd9 5%,
+    #f4dee58a 42%,
+    transparent 72%
+  );
+  --water-light-two: radial-gradient(
+    ellipse,
+    #fffafbc9,
+    #f0dfe585 37%,
+    transparent 70%
+  );
+}
+
+.site.awards-theme {
+  --water-tint: 127, 172, 163;
+  --surface-tint: 226, 242, 237;
+  --nav-tint: 207, 234, 226;
+  --water-field:
+    radial-gradient(ellipse at 8% 20%, #e0f0ea 0%, transparent 46%),
+    radial-gradient(ellipse at 91% 25%, #def0ee 0%, transparent 43%),
+    radial-gradient(ellipse at 69% 84%, #e5f2ed 0%, transparent 49%),
+    linear-gradient(138deg, #f7fbf9 6%, #eef7f3 47%, #f7fbfa 100%);
+  --water-light-one: radial-gradient(
+    ellipse,
+    #fafffcd9 5%,
+    #d8eee68a 42%,
+    transparent 72%
+  );
+  --water-light-two: radial-gradient(
+    ellipse,
+    #f9fffcc9,
+    #dbeee785 37%,
+    transparent 70%
+  );
+}
+
+.site.warm-theme {
+  --water-tint: 184, 164, 126;
+  --surface-tint: 245, 237, 218;
+  --nav-tint: 231, 218, 184;
+  --water-field:
+    radial-gradient(ellipse at 12% 17%, #f3ecdc, transparent 46%),
+    radial-gradient(ellipse at 88% 30%, #f3e7cfa8, transparent 45%),
+    linear-gradient(135deg, #fbfaf5, #f7f1e5 65%, #f9f6ef);
+  --water-light-one: radial-gradient(
+    ellipse,
+    #fffdf6cf,
+    #ecdec98a 42%,
+    transparent 72%
+  );
+  --water-light-two: radial-gradient(
+    ellipse,
+    #fffdf8,
+    #e7ddc473 37%,
+    transparent 70%
+  );
+}
+
+.hero h1:lang(zh-CN) {
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+  font-size: clamp(48px, 5.5vw, 68px);
+  line-height: 1.3;
+  letter-spacing: 0.055em;
+}
+
+.hero h1:lang(zh-CN) .name-period {
+  margin-left: 0.015em;
+}
+
+@media (max-width: 700px) {
+  .hero h1:lang(zh-CN) {
+    font-size: clamp(44px, 11vw, 58px);
+  }
+}

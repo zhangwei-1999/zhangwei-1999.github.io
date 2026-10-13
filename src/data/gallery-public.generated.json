@@ -1,0 +1,31 @@
+{
+  "albums": {
+    "photography": {
+      "photoCount": 46,
+      "manifest": "gallery-encrypted/photography/manifest.json",
+      "viewKey": "c6i2B8LXkdPYeqs0P+dTnL8bedghUSYQ3DHKTbaF77k="
+    },
+    "aesthetic": {
+      "photoCount": 8,
+      "manifest": "gallery-encrypted/aesthetic/manifest.json",
+      "viewKey": "x5TdObm6ts2XEXXS4Z3im+T0H3xtKoIygceLO5z+cDQ="
+    }
+  },
+  "covers": {
+    "life": {
+      "manifest": "gallery-encrypted/covers/life/manifest.json",
+      "viewKey": "HhMWkHZPjlNq4BfKSEYvpjY25bbG+IVhqcoshiWCU0U=",
+      "photoId": "birth-2026"
+    },
+    "photography": {
+      "manifest": "gallery-encrypted/covers/photography/manifest.json",
+      "viewKey": "YEmCo5+bxi8ldFqfnp08oRnmHneTo2sEsun6WI8pDZ0=",
+      "photoId": "everyday-warmth_02"
+    },
+    "aesthetic": {
+      "manifest": "gallery-encrypted/covers/aesthetic/manifest.json",
+      "viewKey": "/cHiIEQXtquqnJicYHevrndKnpLpu2JRu5PnUOBDk5o=",
+      "photoId": "01"
+    }
+  }
+}

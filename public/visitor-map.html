@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Visitor map</title>
+    <base target="_blank" />
+    <style>
+      html, body { margin: 0; padding: 0; background: transparent; color: #58717f; font: 12px system-ui; text-align: center; }
+      body { overflow-x: hidden; }
+      #map { width: 100%; }
+      #map > :not(#mapmyvisitors-widget) { max-width: 100%; }
+      #mapmyvisitors-widget { transform-origin: top left; margin: 0 !important; }
+      .mapmyvisitors-map-container, .jvectormap-container { background-color: transparent !important; }
+      .mapmyvisitors-map { position: relative; }
+      .mapmyvisitors-map.has-transparent-map-background { background-image: none !important; }
+      .mapmyvisitors-map.has-transparent-map-background::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: var(--visitor-map-background);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        filter: url("#visitor-white-knockout");
+        pointer-events: none;
+      }
+      a { display: block; border-radius: 8px; }
+      a:focus-visible { outline: 2px solid #756892; outline-offset: -2px; }
+      img { display: block; width: 100%; max-width: 600px; height: auto; margin: auto; border-radius: 8px; }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="visitor-white-knockout" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+          <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -3 -3 -3 9 0" />
+        </filter>
+      </defs>
+    </svg>
+    <div id="map"></div>
+    <script>
+      // This document runs in a sandbox without allow-same-origin. Never give
+      // this third-party provider access to the application's JavaScript realm.
+      (() => {
+        const host = document.getElementById("map");
+        const watched = new WeakSet();
+        let backgroundUrl = "";
+        let backgroundReady = false;
+        function report(status) {
+          parent.postMessage({ type: "academic-visitor-map", status }, "*");
+        }
+        function inspect() {
+          // The current provider draws a CSS background and SVG, not an img.
+          const map = host.querySelector(".mapmyvisitors-map");
+          const counter = host.querySelector(".mapmyvisitors-visitors");
+          if (map && /\d/.test(counter?.textContent || "") && !host.querySelector(".mapmyvisitors-loading")) {
+            // Move only the raster background to the knockout layer. Keeping
+            // SVG dots, controls and counters outside the filter preserves
+            // their contrast, including the zoom buttons' white symbols.
+            const background = map.style.backgroundImage || getComputedStyle(map).backgroundImage;
+            if (background.startsWith("url(")) {
+              map.style.setProperty("--visitor-map-background", background);
+              map.classList.add("has-transparent-map-background");
+              const url = background.slice(4, -1).trim().replace(/^["']|["']$/g, "");
+              if (url !== backgroundUrl) {
+                backgroundUrl = url;
+                backgroundReady = false;
+                const image = new Image();
+                image.onload = () => { backgroundReady = true; report("ready"); };
+                image.onerror = () => report("unavailable");
+                image.src = url;
+              } else if (backgroundReady) report("ready");
+            }
+          }
+          host.querySelectorAll("img").forEach((image) => {
+            if (watched.has(image)) return;
+            watched.add(image);
+            image.alt = "Visitor map · 访客地图 — MapMyVisitors";
+            if (image.complete && image.naturalWidth) report("ready");
+            else {
+              image.addEventListener("load", () => report("ready"), { once: true });
+              image.addEventListener("error", () => report("unavailable"), { once: true });
+            }
+          });
+          host.querySelectorAll("a").forEach((link) => {
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.setAttribute("aria-label", "Visitor statistics · 访客统计");
+            if (link.hostname === "mapmyvisitors.com" && link.protocol === "http:") link.protocol = "https:";
+          });
+          fitMap();
+        }
+        function fitMap() {
+          const widget = host.querySelector("#mapmyvisitors-widget");
+          if (!widget || !widget.offsetWidth) return;
+          const scale = Math.min(1, host.clientWidth / widget.offsetWidth);
+          const left = Math.max(0, (host.clientWidth - widget.offsetWidth * scale) / 2);
+          widget.style.transform = `translateX(${left}px) scale(${scale})`;
+          host.style.height = `${Math.ceil(widget.offsetHeight * scale)}px`;
+        }
+        window.addEventListener("resize", fitMap);
+        try {
+          const widget = new URL(new URLSearchParams(location.search).get("widget"));
+          if (widget.origin !== "https://mapmyvisitors.com" || widget.pathname !== "/map.js" || widget.username || widget.password) {
+            throw new Error("Unsupported widget URL");
+          }
+          new MutationObserver(inspect).observe(host, { childList: true, subtree: true, characterData: true });
+          // WebKit may run this document before its iframe has a layout width.
+          // Wait for a measured width instead of permanently requesting a 180px
+          // map from an initial zero; the provider is initialized exactly once.
+          let started = false;
+          const layoutObserver = new ResizeObserver(() => {
+            startWhenMeasured();
+            fitMap();
+          });
+          function startWhenMeasured() {
+            if (started || host.clientWidth <= 0) return;
+            started = true;
+            widget.searchParams.set("w", String(Math.max(180, Math.min(600, host.clientWidth))));
+            const script = document.createElement("script");
+            script.id = "mapmyvisitors";
+            script.async = true;
+            script.src = widget.href;
+            script.onload = inspect;
+            script.onerror = () => report("unavailable");
+            host.append(script);
+          }
+          layoutObserver.observe(host);
+          requestAnimationFrame(startWhenMeasured);
+        } catch {
+          report("unavailable");
+        }
+      })();
+    </script>
+  </body>
+</html>

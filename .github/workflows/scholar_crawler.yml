@@ -1,48 +1,35 @@
-name: Automatic Information Update
+name: Update archived Scholar data manually
 
-on: 
- schedule:
-  - cron:  '0 8 * * 0'
+# Optional legacy data maintenance. The site does not fetch Scholar on page load.
+# Sitemap generation now belongs to the static site build.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  build:
-    permissions:
-      contents: write
+  update:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0  # Fetch all history for the repository
-        token: ${{ secrets.GITHUB_TOKEN }} # Use the GitHub token to push changes
-
-    - name: Install Reqs
-      run: |
-        sudo apt-get install python3-setuptools
-        pip3 install scholarly
-        pip3 install gitpython
-
-    - name: Execute scripts
-      run: |
-        cd ./scripts
-        python3 scholar_crawler.py
-        python3 sitemap_generator.py
-
-    - name: Check for file changes
-      id: file_changes
-      run: |
-        if [ -n "$(git diff --stat scripts/scholar.json sitemap.xml)" ]; then
-          echo "CHANGED=true" >> $GITHUB_ENV
-        else
-          echo "CHANGED=false" >> $GITHUB_ENV
-        fi
-
-    - name: Commit and Push Changes
-      if: ${{ env.CHANGED == 'true' }}
-      run: |
-        git config --local user.name "${{ github.actor }}"
-        git config --local user.email "${{ github.actor }}@users.noreply.github.com"
-        git add scripts/scholar.json sitemap.xml
-        git commit -m "Automatic information update"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install optional crawler dependencies
+        run: python -m pip install scholarly setuptools
+      - name: Update Scholar data
+        working-directory: scripts
+        run: python scholar_crawler.py
+      - name: Commit changed data
+        run: |
+          if git diff --quiet -- scripts/scholar.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/scholar.json
+          git commit -m "Update archived Scholar data"
+          git push

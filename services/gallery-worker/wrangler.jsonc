@@ -1,0 +1,21 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "wei-gallery-audit",
+  "account_id": "c19fb2310eec8bd10677736331112046",
+  "main": "entry.ts",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  "vars": {
+    "ENVIRONMENT": "production",
+    "ALLOWED_ORIGINS": "https://zhangwei-1999.github.io",
+    "ALBUM_SLUGS": "life,photography,aesthetic,lover"
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "wei-gallery-audit",
+    "database_id": "9fbc7e60-c22a-4bd7-9dcc-1c599c83513e",
+    "migrations_dir": "migrations"
+  }],
+  "triggers": { "crons": ["17 3 * * *"] },
+  "observability": { "enabled": false }
+}
