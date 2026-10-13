@@ -98,7 +98,7 @@ export function GalleryUnlockDialog({ album, language, onClose, onUnlocked }: Ga
         }}>
           <label htmlFor={inputId}>{zh ? "密码" : "Password"}</label>
           <input ref={inputRef} id={inputId} name="album-password" type="text" required maxLength={512} autoComplete="off" autoCapitalize="none" autoCorrect="off" spellCheck={false} aria-invalid={Boolean(error)} aria-describedby={hintId} readOnly={busy || remaining > 0} />
-          {managed && <p className="gallery-security-note">{zh ? "失败的共享访问口令、IP、时间及网络估算地区会作为加密安全记录保存。" : "Failed shared access phrases, IP addresses, times and approximate network locations are kept as encrypted security records."}</p>}
+          {managed && <p className="gallery-security-note">{zh ? "请输入" : "Input"}</p>}
           {remaining > 0 && <p className="gallery-cooldown" role="status">{zh ? "尝试次数较多，请等待 " : "Please wait "}{Math.floor(remaining / 60)}:{String(remaining % 60).padStart(2, "0")}{zh ? " 后重试。" : " before trying again."}</p>}
           {error && <p className="gallery-unlock__error" role="alert">{error === "password"
             ? (zh ? "密码不正确，或相册无法验证。请再试一次。" : "The password is incorrect, or the album could not be verified. Please try again.")
